@@ -69,7 +69,7 @@ author:
       icon: "fab fa-fw fa-github"
       url: "https://github.com/jzedillo"
     - label: "LinkedIn"
-      icon: "fab fa-fw fa-LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/jorge-zedillo/"
 
 footer:
@@ -81,7 +81,7 @@ footer:
       icon: "fab fa-fw fa-github"
       url: "https://github.com/"
     - label: "LinkedIn"
-      icon: "fab fa-fw fa-link"
+      icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/jorge-zedillo/"
 
 defaults:
