@@ -22,12 +22,9 @@ In this blog I will be going over a malware sample that I pulled from HuskyHacks
 First thing I always do before detonating malware is performing static analysis as it can help me discover IOCs at an early stage and help guide my analysis later on.
 
 **Pull file hashes:**
-
-`sha256sum RAT.Unknown.exe.malz`
-
-`md5sum RAT.Unknown.exe.malz`
-
-`sha1sum RAT.Unknown.exe.malz`
+- `sha256sum RAT.Unknown.exe.malz`
+- `md5sum RAT.Unknown.exe.malz`
+- `sha1sum RAT.Unknown.exe.malz`
 
 Next we want to automatically extract and deobfuscate all strings from the malware binary, using a tool known as *Floss* which is part of Mandiant's FLareVM toolset.
 - Open cmder (or terminal of choice)
