@@ -26,6 +26,10 @@ First thing I always do before detonating malware is performing static analysis 
 - `md5sum RAT.Unknown.exe.malz`
 - `sha1sum RAT.Unknown.exe.malz`
 
+This is useful as we can take the file hashes and run them through VirusTotal, or other OSINT tools, to see if they have been seen in the wild before. 
+
+**Extract all strings from the file:**
+
 Next we want to automatically extract and deobfuscate all strings from the malware binary, using a tool known as *Floss* which is part of Mandiant's FLareVM toolset.
 - Open cmder (or terminal of choice)
 - Run `floss RAT.Unknown.exe.malz > floss.txt` 
