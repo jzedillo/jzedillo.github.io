@@ -37,7 +37,7 @@ Scrolling through, the first thing that caught my eye was a particular Windows A
 
 picture
 
-This function is used to open a resource specified by a complete FTP or HTTP URL [MalApi][MalApi]. We can likley infer that this function is used to download a web resource from the observed domain, likely an additional payload. Furthermore, we see [what command can I run for you] which likely indicates there is some remote command execution capabalites, however we cannot make a decision based on that alone, until we have fully analyzed this binary. 
+This function is used to open a resource specified by a complete FTP or HTTP URL as referrenced here [MalApi][MalApi]. We can likley infer that this function is used to download a web resource from the observed domain, likely an additional payload. Furthermore, we see [what command can I run for you] which likely indicates there is some remote command execution capabalites, however we cannot make a decision based on that alone, until we have fully analyzed this binary. 
 
 [MalApi]: https://malapi.io/
 
