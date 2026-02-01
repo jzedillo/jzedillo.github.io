@@ -114,6 +114,7 @@ Now we can test out the extent of what commands we can run through here.
 
 picture
 
+## Conclusion
 After gathering all of our findings we can infer that this malware deploys a bind shell, that provides remote command execution capabilities and deploys a dropper for persistence. This activity is similar to a RAT as they have persistence, command execution and file download capabilities however, the clear distinction is that it opens a TCP socket and listens for incoming connections. 
 
 That's all folks, I hope you enjoyed!
