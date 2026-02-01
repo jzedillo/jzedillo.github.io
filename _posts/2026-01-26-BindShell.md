@@ -30,7 +30,7 @@ Next we want to automatically extract and deobfuscate all strings from the malwa
 - Open cmder (or terminal of choice)
 - Run `floss RAT.Unknown.exe.malz > floss.txt` 
 
-**Info:** The output is usually long and can be overwhelming, so dont get too stumped trying to find every single detail / IOC. Additionally not all IOCs will be found from here this is just helpful for early stage IOC findings that can help you narrow down your searching later on. 
+**Note:** The output is usually long and can be overwhelming, so dont get too stumped trying to find every single detail / IOC. Additionally not all IOCs will be found from here this is just helpful for early stage IOC findings that can help you narrow down your searching later on. 
 {: .notice--primary}
 
 Scrolling through, the first thing that caught my eye was a particular Windows API function `InternetOpenUrlW`, which was followed by some intersting strings in the picture below.
@@ -53,7 +53,7 @@ When we do this we observe a pop up message saying "NO SOUP FOR YOU” which is 
 picture
 
 **Note:** Make sure you are restoring from a pre-detonation snapshot every time you want to perform another detonation, as we do not fully know what is being installed, written, changed, etc.
-{: .notice--info}
+{: .notice--primary}
 
 **2nd Detonation**
 
