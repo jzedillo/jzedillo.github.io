@@ -39,7 +39,7 @@ Next we want to automatically extract and deobfuscate all strings from the malwa
 
 Scrolling through, the first thing that caught my eye was a particular Windows API function `InternetOpenUrlW`, which was followed by some intersting strings in the picture below.
 
-picture
+![Floss Output](/assets/images/RAT1/floss.png)
 
 This function is used to open a resource specified by a complete FTP or HTTP URL as referrenced here [MalApi][MalApi]. We can infer that this function is used to download a web resource from the observed domain, likely an additional payload. Furthermore, we see "*what command can I run for you*" which likely indicates there is some remote command execution capabalites, however we cannot fully confirm based on that alone, until we have fully analyzed this binary. 
 
@@ -55,7 +55,7 @@ I like to detonate malware a couple times to see if we can observe any different
 
 When we do this we observe a pop up message saying "*NO SOUP FOR YOU*” which is one of the early indicators we observed when extracting the obfuscated strings from the binary.
 
-picture
+![No Soup For You](/assets/images/RAT1/NOSOUPFORYOU.png)
 
 **Note:** Make sure you are restoring from a pre-detonation snapshot every time you want to perform another detonation, as we do not fully know what is being installed, written, changed, etc.
 {: .notice--primary}
@@ -65,24 +65,22 @@ picture
 
 Looking in wireshark, we observe a successful (200) ‘*GET*’ request to a specified server (our fake internet simulator) for a file named [msdcorelib.exe].
 
-picture
+![Wireshark traffic](/assets/images/RAT1/wireshark.png)
 
 Right now, we have no clue where that file is being downloaded to on our machine, could be a temp folder, downloads folder, who knows. If we try and search for that file in our file system, we do not see it. Therefore we will have to detonate it again and use different tools. 
-
-picture
 
 **3rd Detonation:** 
 - On FlareVM → open procmon → select fitler icon → filter on 'process contains RAT.Unknown.exe' and 'operation contains File' → detonate file again.
 
 Scrolling through we will see a lot of *CreateFile* and *WriteFile* events, however there is a particular event that catches my eye. We see a CreateFile and WriteFile event located at the startup directory [C:\Users\sherlock\AppData\Roaming\Microsoft\Windows\Start Menu\ Program\Startup\mscordll.exe]. 
 
-picture
+![ProcMon](/assets/images/RAT1/procmon.png)
 
 If we keep looking through the file operations, we will not see the previous file we were looking for [msdcorelib.exe]. This is likely because when you download from a web resource, the data of the download can be transmitted first → then written to the file system to another name. That is likley what is happening here and is a common masquerading / evasion technique. 
 
 We can verify the file is there by navigating to that file path
 
-picture
+![Startup](/assets/images/RAT1/startup.png)
 
 There it is. 
 
@@ -100,11 +98,11 @@ Detonate the file again and scroll to find our malicious file.
 
 We can see the file is listening on TCP port 5555.
 
-picture
+![TCP View](/assets/images/RAT1/tcpview.png)
 
 On REMnux → open terminal → attemp to connect to our FlareVM host using netcat `nc -nv 10.0.0.4 5555`
 
-picture
+![Netcat Connection](/assets/images/RAT1/NCconnection.png)
 
 WE ARE IN!!!
 
@@ -114,7 +112,7 @@ Open another tab in your terminal → run `echo “base64 string” | base64 -d`
 
 Now we can test out the extent of what commands we can run through here.
 
-picture
+![netcat cmds](/assets/images/RAT1/netcat.png)
 
 ## Conclusion
 After gathering all of our findings we can infer that this malware deploys a bind shell, that provides remote command execution capabilities and deploys an additional payload in the startup folder for persistence. 
