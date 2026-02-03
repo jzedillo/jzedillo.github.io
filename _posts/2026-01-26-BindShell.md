@@ -28,6 +28,20 @@ First thing I always do before detonating malware is performing static analysis 
 
 This is useful as we can take the file hashes and run them through VirusTotal, or other OSINT tools, to see if they have been seen in the wild before. 
 
+**Packed or Unpacked?**
+
+Something important to check early on, is whether the binary is packed or not. 
+
+A packed binary is compressed, encrypted or obfuscated using a packer to hide the malwares true nature. This is done to evade antivirus signature detections and static analysis.
+
+A packer takes all the code below the stub point in the program and crunches it down, making it differ from the original file. 
+
+At runtime the stub will take a look inside the small piece of code and expand it back to its original size, allowing the malware to evade antivirus signature detections because it will not be recognized when it was compressed.
+
+picture
+
+In this case the binary is not packed.
+
 **Extract all strings from the file:**
 
 Next we want to automatically extract and deobfuscate all strings from the malware binary, using a tool known as *Floss* which is part of Mandiant's FLareVM toolset.
@@ -63,7 +77,7 @@ When we do this we observe a pop up message saying "*NO SOUP FOR YOU*” which i
 **2nd Detonation**
 - Start up InetSim + Wireshark on our REMnux machine → detonate the file again.
 
-Looking in wireshark, we observe a successful (200) ‘*GET*’ request to a specified server (our fake internet simulator) for a file named [msdcorelib.exe].
+Looking in wireshark, we observe a successful (200) ‘*GET*’ request to a specified server `[http://serv1.ec2-102-95-13-2-ubuntu.local]` for a file named `[msdcorelib.exe]`.
 
 ![Wireshark traffic](/assets/images/RAT1/wireshark.png)
 
