@@ -59,7 +59,7 @@ plugins:
 
 author:
   name   : "Jorge Zedillo"
-  avatar : "/assets/images/bio-photo.jpg"
+  avatar : "assets/images/BioPic/cyber.png"
   bio    : "My awesome biography"
   links:
     - label: "Twitter"
