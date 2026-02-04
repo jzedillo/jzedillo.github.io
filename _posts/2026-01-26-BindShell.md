@@ -38,7 +38,7 @@ A packer takes all the code below the stub point in the program and crunches it 
 
 At runtime the stub will take a look inside the small piece of code and expand it back to its original size, allowing the malware to evade antivirus signature detections because it will not be recognized when it was compressed.
 
-picture
+![Packed](/assets/images/RAT1/PEbear.png)
 
 In this case the binary is not packed.
 
