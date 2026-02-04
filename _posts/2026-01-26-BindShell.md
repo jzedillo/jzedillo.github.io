@@ -1,5 +1,5 @@
 ---
-title: "Malware Dropper + Bind Shell"
+title: "Bind Shell Analysis"
 date: 2026-01-26
 categories: malware analysis
 tags: [malware, reversing, flarevm, remnux]
