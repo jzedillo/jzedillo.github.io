@@ -7,6 +7,8 @@ tags:
   - ransomware
   - breach
   - canvas
+layout: single
+author_profile: true
 ---
 
 BLUF -
