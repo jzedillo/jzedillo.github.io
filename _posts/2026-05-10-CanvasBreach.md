@@ -21,7 +21,9 @@ ShinyHunters allegedly stole approximately 3.65 TB of data affecting nearly 275 
 - The incident disrupted schools and universities during critical academic periods, including finals and assignment deadlines
 
 ## Description
-On May 8th, 2026, Instructure, the parent company of Canvas learning management system, was involved in a major ransom breach. The breach was carried out by the Advanced Persitant Threat (APT) group ShinyHunters, who claimed to have stolen approximately 3.65 TB of data. Shiny has been around since 2020 .... and this is their first huge shift in cyberattacks, targeting a critical sector during critical academic periods.
+On May 8th, 2026, Instructure, the parent company of Canvas learning management system, was involved in a major ransom breach. The breach was carried out by the Advanced Persitant Threat (APT) group ShinyHunters, who claimed to have stolen approximately 3.65 TB of data. ShinyHunter's has been around since 2020 specializing in large-scale data theft and extortion and has been linked to numerous high-profile attacks. 
+
+The attack represents a notable evolution in their targeting strategy as this is a huge shift in cyberattacks, targeting a critical sector during critical academic periods.
 
 The group threatened to publicly leak the stolen information on their Dedicated Leak Site (DLS) and defaced Canvas login portals until a ransom agreement was met by Instructure.
 
