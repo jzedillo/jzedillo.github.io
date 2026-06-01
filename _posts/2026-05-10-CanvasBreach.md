@@ -21,12 +21,12 @@ ShinyHunters allegedly stole approximately 3.65 TB of data affecting nearly 275 
 - The incident disrupted schools and universities during critical academic periods, including finals and assignment deadlines
 
 ## Description
-On May 8th, 2026, Instructure, the parent company of Canvas learning management system, was involved in a major ransom breach. The breach was carried out by the Advanced Persitant Threat (APT) group ShinyHunters, who claimed to have stolen approximately 3.65 TB of data. Shiny has been around for .... and this is their first huge shift in cyberattacks, targeting a critical sector during critical academic periods.
+On May 8th, 2026, Instructure, the parent company of Canvas learning management system, was involved in a major ransom breach. The breach was carried out by the Advanced Persitant Threat (APT) group ShinyHunters, who claimed to have stolen approximately 3.65 TB of data. Shiny has been around since 2020 .... and this is their first huge shift in cyberattacks, targeting a critical sector during critical academic periods.
 
 The group threatened to publicly leak the stolen information on their Dedicated Leak Site (DLS) and defaced Canvas login portals until a ransom agreement was met by Instructure.
 
 ## Assessment
-This attack shows a thought-out attack method used by ShinyHunters, targeting many schools, and universities, during a very critical academic period involving final exams, coursework submissions and academic deadlines, which can have a huge impact on students. 
+This attack demonstrates a deliberate and coordinated strategy employed by ShinyHunters, targeting many schools, and universities, during a very critical academic period involving final exams, coursework submissions and academic deadlines, which has potential to cause significant disruption and affect students. 
 
 Not only that, but educational platforms often store sensitive personal and academic information. Exposure of this data could lead to:
 - targeted phishing attacks towards staff and students
@@ -35,3 +35,4 @@ Not only that, but educational platforms often store sensitive personal and acad
 - Loss of trust in educational technology platforms
 
 ## Recommendations
+Organizations should strengthen vendor risk management by regularly auditing third-party security controls and requiring strict breach notification and security standards in contracts. Multi-factor authentication, least-privilege access, and segmentation of sensitive systems should be enforced to reduce exposure.
